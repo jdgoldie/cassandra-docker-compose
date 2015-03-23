@@ -1,0 +1,48 @@
+#SkyDNS and SkyDock to provide DNS among docker containers
+skydns:
+    image: crosbymichael/skydns
+    ports:
+        - "172.17.42.1:53:53/udp"
+    hostname: skydns
+    command: "-nameserver 8.8.8.8:53 -domain docker"     
+skydock:
+    image: crosbymichael/skydock
+    links:
+        - skydns
+    volumes:
+        - /var/run/docker.sock:/docker.sock
+    command: "-ttl=30 -environment=dev -s=/docker.sock -domain=docker -name=cluster_skydns_1"
+#
+# Datacenter 1 seed node
+#
+seed1:
+    image: cassandra_test
+    environment:
+        - DATACENTER=CLUSTER1
+    ports:
+        - "9042:9042"
+        - "9160:9160"
+#
+# Datacenter 1 non-seed node
+#
+nodedc1: 
+    image: cassandra_test
+    environment:
+        - DATACENTER=CLUSTER1  
+#
+# Datacenter 2 seed node
+#
+seed2:
+    image: cassandra_test
+    environment:
+        - DATACENTER=CLUSTER2
+    ports:
+        - "9043:9042"
+        - "9161:9160"
+#
+# Datacenter 2 non-seed node
+#
+nodedc2:
+    image: cassandra_test
+    environment:
+        - DATACENTER=CLUSTER2        

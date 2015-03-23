@@ -1,0 +1,3 @@
+# indicate the rack and dc for this node
+dc={DC}
+rack=RAC1
