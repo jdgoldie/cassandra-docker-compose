@@ -3,8 +3,6 @@
 # set up datacenter name
 cat /modsrc/cassandra-rackdc.properties | sed -e s/{DC}/$DATACENTER/g > /opt/cassandra/conf/cassandra-rackdc.properties
 
-cat /opt/cassandra/conf/cassandra-rack.dc
-
 # Start server
 cd /opt/cassandra
 bin/cassandra -f

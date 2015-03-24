@@ -76,5 +76,5 @@ inter_dc_tcp_nodelay: false
 seed_provider:
     - class_name: org.apache.cassandra.locator.SimpleSeedProvider
       parameters:
-          - seeds:  "cluster_seed1_1.cassandra_test.dev.docker,cluster_seed2_1.cassandra_test.dev.docker"
+          - seeds:  "cluster_seed1_1.cassandra_compose.dev.docker,cluster_seed2_1.cassandra_compose.dev.docker"
 endpoint_snitch: GossipingPropertyFileSnitch
