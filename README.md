@@ -61,11 +61,12 @@ Check `nodetool` again and you will see another node join each datacenter.
 
 ### Future
 
-* Write a full blog entry to expand on docker-compose.yml
-* Get Ops Center working 
+* Write a full blog entry to expand on `docker-compose.yml`
+* Get Ops Center working :+1:
 * Use labels for datacenters instead of using environment variables.
 * Sample application that writes to/from the cluster to demonstrate seamless failover.
 
+:octocat:
 
 
 
