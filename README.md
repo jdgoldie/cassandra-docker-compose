@@ -45,7 +45,10 @@ cluster_skydock_1
 This means that the assigned name for the `seed1` service is `cluster_seed1_1.cassandra_compose.dev.docker`. If you 
 check the `cassandra.yaml` file, you will see it listed as one of the seed nodes.
 
-Run `docker run -t --rm jdgoldie/cassandra_compose watch -n 3 bin/nodetool -f cluster_seed1_1.cassandra_compose.dev.docker status`
+Run 
+```
+docker run -t --rm jdgoldie/cassandra_compose watch -n 3 bin/nodetool -f cluster_seed1_1.cassandra_compose.dev.docker status
+```
 to see the status of the cluster.  Notice that, thanks to SkyDNS, the hostname resolves to the `seed1` container.
 
 Now add some nodes.
