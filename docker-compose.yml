@@ -50,7 +50,7 @@ nodedc2:
 # Ops Center Node
 #
 nodeops:
-    image: abh1nav/opscenter
+    image: jdgoldie/opscenter_compose
     ports:
         - "8888:8888" 
         - "61620:61620"
