@@ -1,3 +1,4 @@
-#
-# No-op for the agent for now
-#
+#!/bin/bash
+
+cd /opt/agent
+bin/datastax-agent -f

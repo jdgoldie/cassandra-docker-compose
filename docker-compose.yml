@@ -46,3 +46,11 @@ nodedc2:
     image: jdgoldie/cassandra_compose
     environment:
         - DATACENTER=CLUSTER2        
+#
+# Ops Center Node
+#
+nodeops:
+    image: abh1nav/opscenter
+    ports:
+    	- "8888"  : "8888" 
+    	- "61620" : "61620"

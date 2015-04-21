@@ -7,6 +7,7 @@ ADD . /modsrc
 
 RUN \
     cp /modsrc/cassandra.yaml /opt/cassandra/conf/; \
+    cp /modsrc/address.yaml  /opt/agent/conf/; \
     cp /modsrc/agent-run     /etc/service/agent/run; \
     cp /modsrc/cassandra-run /etc/service/cassandra/run;
     
