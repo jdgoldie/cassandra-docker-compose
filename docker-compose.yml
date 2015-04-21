@@ -52,5 +52,5 @@ nodedc2:
 nodeops:
     image: abh1nav/opscenter
     ports:
-    	- "8888"  : "8888" 
-    	- "61620" : "61620"
+        - "8888:8888" 
+        - "61620:61620"
