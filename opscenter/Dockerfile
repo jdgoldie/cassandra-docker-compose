@@ -3,7 +3,7 @@
 #
 FROM abh1nav/cassandra
 
-ADD .. /modsrc
+ADD . /modsrc
 
 RUN \
     mkdir -p /opt/opscenter/conf/cluster; \
