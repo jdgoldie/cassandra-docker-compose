@@ -18,7 +18,7 @@ skydock:
 seed1:
     image: jdgoldie/cassandra_compose
     environment:
-        - DATACENTER=CLUSTER1
+        - DATACENTER=DC1
     ports:
         - "9042:9042"
         - "9160:9160"
@@ -28,14 +28,14 @@ seed1:
 nodedc1: 
     image: jdgoldie/cassandra_compose
     environment:
-        - DATACENTER=CLUSTER1  
+        - DATACENTER=DC1  
 #
 # Datacenter 2 seed node
 #
 seed2:
     image: jdgoldie/cassandra_compose
     environment:
-        - DATACENTER=CLUSTER2
+        - DATACENTER=DC2
     ports:
         - "9043:9042"
         - "9161:9160"
@@ -45,7 +45,7 @@ seed2:
 nodedc2:
     image: jdgoldie/cassandra_compose
     environment:
-        - DATACENTER=CLUSTER2        
+        - DATACENTER=DC2        
 #
 # Ops Center Node
 #
